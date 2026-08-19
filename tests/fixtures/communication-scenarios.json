@@ -1,0 +1,89 @@
+[
+  {
+    "name": "create-technical-german",
+    "mode": "create",
+    "conversation_language": "de-DE",
+    "artifact_type": "verification-note",
+    "audience": "technical",
+    "tone": "precise",
+    "status": "ready",
+    "title": "Release verification",
+    "body": "Run npm run check and review https://github.com/Crome696/productivity-plugin/issues/1.",
+    "missing_information": [],
+    "open_questions": [],
+    "preserve": [
+      "npm run check",
+      "https://github.com/Crome696/productivity-plugin/issues/1"
+    ]
+  },
+  {
+    "name": "rewrite-business",
+    "mode": "rewrite",
+    "conversation_language": "en-US",
+    "artifact_type": "status-update",
+    "audience": "business",
+    "tone": "outcome-oriented",
+    "status": "ready",
+    "title": "Delivery status",
+    "body": "The implementation is ready for review while preserving the approved scope.",
+    "missing_information": [],
+    "open_questions": [],
+    "preserve": []
+  },
+  {
+    "name": "mixed-layered",
+    "mode": "create",
+    "conversation_language": "fr-FR",
+    "artifact_type": "review-summary",
+    "audience": "mixed",
+    "tone": "layered",
+    "status": "ready",
+    "title": "Review summary",
+    "body": "Outcome: the package is ready for validation. Technical detail: the contract remains version 1.",
+    "missing_information": [],
+    "open_questions": [],
+    "preserve": []
+  },
+  {
+    "name": "ambiguous-audience",
+    "mode": "create",
+    "conversation_language": "de-DE",
+    "artifact_type": "message",
+    "audience": "mixed",
+    "tone": "professional",
+    "status": "needs_clarification",
+    "title": null,
+    "body": null,
+    "missing_information": [],
+    "open_questions": ["Which audience profile should determine the level of detail?"],
+    "preserve": []
+  },
+  {
+    "name": "missing-material-facts",
+    "mode": "create",
+    "conversation_language": "en-US",
+    "artifact_type": "announcement",
+    "audience": "business",
+    "tone": "professional",
+    "status": "needs_clarification",
+    "title": null,
+    "body": null,
+    "missing_information": ["The confirmed release date is missing."],
+    "open_questions": [],
+    "preserve": []
+  },
+  {
+    "name": "blocked-no-fabrication",
+    "mode": "rewrite",
+    "conversation_language": "ja-JP",
+    "artifact_type": "report",
+    "audience": "technical",
+    "tone": "precise",
+    "status": "blocked",
+    "title": null,
+    "body": null,
+    "missing_information": [],
+    "open_questions": [],
+    "preserve": []
+  }
+]

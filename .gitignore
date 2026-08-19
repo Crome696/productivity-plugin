@@ -1,0 +1,6 @@
+node_modules/
+coverage/
+.npm/
+.cursor/hooks/state/
+.codex/hooks/state/
+*.tsbuildinfo

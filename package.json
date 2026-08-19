@@ -1,0 +1,23 @@
+{
+  "name": "productivity-plugin-contracts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Contract and scenario tests for the CromeSDK Productivity plugin.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit --pretty false",
+    "test": "vitest run",
+    "check": "npm run typecheck && npm test && node plugin/hooks/pre-commit-structure.mjs --check"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "latest",
+    "@types/node": "latest",
+    "js-yaml": "latest",
+    "typescript": "latest",
+    "vitest": "latest"
+  }
+}
