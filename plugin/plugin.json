@@ -1,0 +1,30 @@
+{
+  "name": "productivity",
+  "displayName": "Productivity",
+  "version": "0.1.0",
+  "description": "Adaptive communication workflows for evidence-bound English artifacts across technical, business, and mixed audiences.",
+  "author": {
+    "name": "CromeSDK"
+  },
+  "homepage": "https://github.com/Crome696/productivity-plugin",
+  "repository": "https://github.com/Crome696/productivity-plugin",
+  "license": "MIT",
+  "keywords": [
+    "productivity",
+    "communication",
+    "writing",
+    "workflows"
+  ],
+  "tags": [
+    "productivity",
+    "communication",
+    "writing",
+    "workflows"
+  ],
+  "category": "productivity",
+  "logo": "assets/logo.png",
+  "skills": "./skills/",
+  "agents": "./agents/",
+  "commands": "./commands/",
+  "rules": "./rules/"
+}

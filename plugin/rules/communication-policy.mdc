@@ -1,0 +1,43 @@
+# Communication Policy
+
+Apply this policy to every Productivity communication workflow.
+
+## Evidence boundary
+
+- Use only facts, constraints, identifiers, names, URLs, code, purpose, and
+  source content supplied by the user or explicitly verified in the request.
+- Do not invent facts, dates, actors, commitments, metrics, requirements,
+  risks, conclusions, or next actions.
+- Mark an inference as an inference; never present it as a fact.
+- Ask a focused question when missing information is material to a trustworthy
+  artifact.
+
+## Modes and audiences
+
+- `create` composes a new artifact from supplied facts, purpose, and
+  constraints.
+- `rewrite` preserves the supplied content's meaning, facts, constraints,
+  identifiers, and intended scope.
+- Honor explicit `technical`, `business`, or `mixed` audience selection.
+- Infer an audience only when the request makes it unambiguous.
+- Ask for clarification when different audience profiles would materially
+  change the result.
+- Use precise tone for technical audiences, outcome-oriented tone for
+  business audiences, layered tone for mixed audiences, and clear concise
+  professional tone by default.
+
+## Language boundary
+
+- Conversation-level guidance may follow the user's language.
+- Every artifact intended for persistence must be English.
+- `CommunicationArtifact.artifact_language` is always `en` in version 1.
+- Preserve code, URLs, identifiers, product names, and other immutable values
+  exactly when translation would change their meaning.
+- Keep the localized explanation outside the separately delimited artifact.
+
+## Safety boundary
+
+- A `ready` result requires a non-empty English artifact and no unresolved
+  material questions.
+- A `needs_clarification` or `blocked` result must not fabricate an artifact.
+- Do not save, send, publish, message, or otherwise persist generated content.

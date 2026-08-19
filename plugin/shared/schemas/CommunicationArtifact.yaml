@@ -1,0 +1,112 @@
+schema: CommunicationArtifact
+version: 1
+title: Version 1 adaptive communication handoff
+type: object
+additionalProperties: false
+required:
+  - schema
+  - version
+  - status
+  - mode
+  - conversation_language
+  - artifact_type
+  - audience
+  - tone
+  - artifact_language
+  - title
+  - body
+  - missing_information
+  - open_questions
+  - failure
+properties:
+  schema:
+    const: CommunicationArtifact
+  version:
+    const: 1
+  status:
+    type: string
+    enum:
+      - ready
+      - needs_clarification
+      - blocked
+  mode:
+    type: string
+    enum:
+      - create
+      - rewrite
+  conversation_language:
+    type: string
+    minLength: 2
+  artifact_type:
+    type: string
+    minLength: 1
+  audience:
+    type: string
+    enum:
+      - technical
+      - business
+      - mixed
+  tone:
+    type: string
+    minLength: 1
+  artifact_language:
+    const: en
+  title:
+    type:
+      - string
+      - 'null'
+  body:
+    type:
+      - string
+      - 'null'
+  missing_information:
+    type: array
+    items:
+      type: string
+  open_questions:
+    type: array
+    items:
+      type: string
+  failure:
+    oneOf:
+      - type: 'null'
+      - type: object
+        additionalProperties: false
+        required:
+          - code
+          - message
+          - operation
+          - retryable
+        properties:
+          code:
+            type: string
+            minLength: 1
+          message:
+            type: string
+            minLength: 1
+          operation:
+            type: string
+            minLength: 1
+          retryable:
+            type: boolean
+
+allOf:
+  - if:
+      properties:
+        status:
+          const: ready
+    then:
+      properties:
+        title:
+          type: string
+          minLength: 1
+        body:
+          type: string
+          minLength: 1
+        missing_information:
+          maxItems: 0
+        open_questions:
+          maxItems: 0
+      required:
+        - title
+        - body

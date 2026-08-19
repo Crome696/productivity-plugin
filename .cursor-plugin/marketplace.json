@@ -1,0 +1,18 @@
+{
+  "name": "productivity-plugin",
+  "owner": {
+    "name": "CromeSDK"
+  },
+  "metadata": {
+    "description": "Marketplace-ready Productivity communication workflows for Cursor, Codex, Claude, and Agents.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "productivity",
+      "source": "./plugin",
+      "version": "0.1.0",
+      "description": "Adaptive communication workflows for evidence-bound English artifacts across technical, business, and mixed audiences."
+    }
+  ]
+}

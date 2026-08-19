@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": "node ./hooks/pre-commit-structure.mjs",
+        "type": "command",
+        "timeout": 30,
+        "matcher": "(?:^|[;&|]\\s*)(?:(?:sudo|env|command|exec|nohup)\\s+)*git(?:\\.exe|\\.cmd|\\.bat)?\\b[\\s\\S]*\\bcommit\\b",
+        "failClosed": true
+      }
+    ]
+  }
+}

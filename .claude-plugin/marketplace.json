@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "productivity-plugin",
+  "version": "0.1.0",
+  "description": "Marketplace-ready Productivity communication workflows for Cursor, Codex, Claude, and Agents.",
+  "owner": {
+    "name": "CromeSDK"
+  },
+  "plugins": [
+    {
+      "name": "productivity",
+      "source": "./plugin",
+      "description": "Adaptive communication workflows for evidence-bound English artifacts across technical, business, and mixed audiences.",
+      "version": "0.1.0",
+      "author": {
+        "name": "CromeSDK"
+      },
+      "category": "productivity",
+      "tags": [
+        "productivity",
+        "communication",
+        "writing",
+        "workflows"
+      ],
+      "displayName": "Productivity"
+    }
+  ]
+}
